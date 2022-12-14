@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           simple-json
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ksaweryr/simple-json#readme>
+homepage:       https://github.com/ksaweryr/simple-json#readme
+bug-reports:    https://github.com/ksaweryr/simple-json/issues
+author:         Ksawery Radziwiłowicz
+maintainer:     ksawery.radziwilowicz@gmail.com
+copyright:      2022 Ksawery Radziwiłowicz
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/ksaweryr/simple-json
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_simple_json
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , containers >=0.6
+  default-language: Haskell2010
+
+test-suite simple-json-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_simple_json
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers >=0.6
+    , simple-json
+  default-language: Haskell2010
